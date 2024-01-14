@@ -5,7 +5,7 @@ import streamlit as st
 
 def main():
     st.set_page_config(
-        page_title="OpenAI Assistant with Retrieval",
+        page_title="Quixy Evaluator - TrueTech",
         page_icon="📚",
     )
 
@@ -31,7 +31,7 @@ def main():
                 st.markdown(message["content"])
 
                 # Accept user input
-        if prompt := st.chat_input(f"Message for more Greek recipes..."):
+        if prompt := st.chat_input(f"Please enter article details in this format: Title: [title]. Cotent: [content]"):
             # Add user message to chat history
             st.session_state.messages.append({"role": "user", "content": prompt})
             # Display user message in chat message container
